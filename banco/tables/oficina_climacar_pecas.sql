@@ -21,7 +21,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '17cc52af-03c2-11f1-b117-d09466c4e005:1-34';
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '17cc52af-03c2-11f1-b117-d09466c4e005:1-35';
 
 --
 -- Table structure for table `pecas`
@@ -42,6 +42,15 @@ CREATE TABLE `pecas` (
   CONSTRAINT `pecas_ibfk_1` FOREIGN KEY (`ordem_id`) REFERENCES `ordens_servico` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pecas`
+--
+
+LOCK TABLES `pecas` WRITE;
+/*!40000 ALTER TABLE `pecas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pecas` ENABLE KEYS */;
+UNLOCK TABLES;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +62,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-10 16:03:32
+-- Dump completed on 2026-03-17 20:43:01
